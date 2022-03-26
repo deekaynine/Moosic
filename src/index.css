@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply h-full;
+    @apply w-full;
+    @apply overflow-hidden;
+    @apply box-border;
+  }
+}
+
+.volumeDial::-webkit-slider-thumb {
+  @apply appearance-none w-[15px] h-[15px] bg-[#c7c7c7]  cursor-pointer border-[1px] rounded-full border-solid border-white;
+}
+
+.volumeDial::-webkit-slider-thumb:hover {
+  @apply bg-slate-200;
+}
+
+.soundDial {
+  display: ;
+}
+
+.soundDial::-webkit-slider-thumb {
+  @apply appearance-none w-[15px] h-[15px] bg-[#c7c7c7]  cursor-pointer border-[1px] rounded-full border-solid border-white;
+}
+
+input[type="range"][orient="vertical"] {
+  @apply w-[50px] h-[1px] appearance-none mb-[10px] ml-0 bg-[#c0c0c0] rounded-sm border-solid border-[#c7c7c7] border-[1px] rotate-[270deg];
+}
