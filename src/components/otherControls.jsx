@@ -1,13 +1,13 @@
 import React from "react";
 import rain from "../images/rain.png";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import RainASMR from "../Sounds/rain.mp3";
 import OceanASMR from "../Sounds/Ocean.mp3";
 import whiteNoiseASMR from "../Sounds/whiteNoise.mp3";
 import waves from "../images/waves.png";
 import youtube from "../images/youtube.png";
 import WhiteNoise from "../images/whiteNoise.png";
-import { motion } from "framer-motion";
 import Logo from "/src/images/Beats.png";
 
 const Rain = new Audio(RainASMR);

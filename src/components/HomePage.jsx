@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import github from "/src/images/github.png";
 import RadioStation from "./RadioStations";
-import play from "/src/images/playBtn.png";
 import AudioControls from "/src/components/audioControl";
-import pauseImg from "/src/images/pause.png";
 import OtherControls from "./otherControls";
 import ReactPlayer from "react-player";
+import github from "/src/images/github.png";
+import play from "/src/images/playBtn.png";
+import pauseImg from "/src/images/pause.png";
 
 const HomePage = () => {
   const [BtnClass, setBtnClass] = useState("PlayPause");
