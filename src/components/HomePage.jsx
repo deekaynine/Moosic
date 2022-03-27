@@ -17,10 +17,10 @@ const HomePage = () => {
   const [stationName, setStationName] = useState("LofiGirl");
   const [youtubeChannal, setYoutubeChannal] = useState("");
   const [currLiveStream, setLiveStream] = useState(
-    "https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl"
+    "https://www.youtube.com/watch?v=-9gEgshJUuY&ab_channel=lofigeek"
   );
   const [video, setVideo] = useState(
-    `//www.youtube.com/embed/TURbeWK2wwg?autoplay=1&mute=1&start=1`
+    `https://www.youtube.com/watch?v=-9gEgshJUuY&ab_channel=lofigeek`
   );
 
   const handlePausePlaySwitch = () => {
@@ -192,9 +192,14 @@ const HomePage = () => {
       {/*RadioContainer*/}
       <div class="hidden md:flex flex-col w-[15vw] content-end">
         {/*Logo*/}
-        <div class="flex justify-center items-center align-center w-[150%] h-[10%] text-center  text-4xl font-bold text-white uppercase tracking-[7px] z-10">
+
+        <motion.div
+          animate={{ opacity: [0, 1] }}
+          transition={{ delay: 0.5 }}
+          class="flex justify-center items-center align-center w-[150%] h-[10%] text-center  text-4xl font-bold text-white uppercase tracking-[7px] z-10"
+        >
           Home Moosic
-        </div>
+        </motion.div>
 
         {/*SubHeading*/}
         <div class=" flex h-[10%]"></div>
@@ -249,9 +254,13 @@ const HomePage = () => {
       {/*PauseScreen*/}
       {paused ? (
         <div class="bg-black w-full h-full absolute top-0 left-0 opacity-90 z-0 ">
-          <p class="absolute top-1/2 left-[57%] md:top-1/2 md:left-1/2 md:transform -translate-x-1/2 -translate-y-1/2 text-[#dfdbdb] font-semibold uppercase cursor-pointer items-center text-3xl tracking-[7px]   ">
+          <motion.div
+            animate={{ opacity: [0, 1] }}
+            transition={{ delay: 0.2 }}
+            class="absolute top-1/2 left-[57%] md:top-1/2 md:left-1/2 md:transform -translate-x-1/2 -translate-y-1/2 text-[#dfdbdb] font-semibold uppercase cursor-pointer items-center text-3xl tracking-[7px]   "
+          >
             Music Paused
-          </p>
+          </motion.div>
         </div>
       ) : (
         ""

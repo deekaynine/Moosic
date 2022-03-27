@@ -30,32 +30,21 @@ const AdditionSettings = (props) => {
   Ocean.play();
   whiteNoise.play();
 
-  const setTransition = () => {
-    setTransitionValue(0);
-  };
-
-  setTimeout(function () {
-    setTransitionValue(-450); //Title Pop in and out
-    setTitleLocation(420);
-  }, 2000);
-
-  useEffect(() => {
-    setTransition();
-    setTitleLocation(1500);
-  }, [props.radio]);
-
   return (
     <>
-      <div class="flex justify-center items-center align-center w-[100%] h-[10%] text-center text-4xl font-bold text-white uppercase tracking-[7px] z-10 hidden:sm">
+      <motion.div
+        animate={{ opacity: [0, 1] }}
+        transition={{ delay: 2 }}
+        class="flex justify-center items-center align-center w-[100%] h-[10%] text-center text-4xl font-bold text-white uppercase tracking-[7px] z-10 hidden:sm"
+      >
         <img src={Logo} alt="" class="hidden md:block sm:m-auto" />
-      </div>
+      </motion.div>
 
       <div class="hidden md:flex md:flex-col  md:justify-end md:text-center text-white text-2xl md:h-[99%] md:min-w-[100%] mb-[5rem]">
         <motion.div
-          animate={{ x: transitionValue }}
+          animate={{ opacity: [0, 1] }}
           transition={{ delay: 1 }}
           class="text-4xl w-min text-white text-bold uppercase tracking-[0.45rem] relative border-solid border-white border-b-2 "
-          style={{ left: TitleLocation }}
         >
           {props.radio}
           <div class="">
