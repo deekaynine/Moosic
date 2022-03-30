@@ -188,7 +188,7 @@ const HomePage = () => {
   };
 
   return (
-    <div class="flex w-[98vw] h-[96vh] justify-between">
+    <div class="flex w-[98vw] h-[96vh] justify-between  ">
       {/*RadioContainer*/}
       <div class="hidden md:flex flex-col w-[15vw] content-end">
         {/*Logo*/}
@@ -224,7 +224,7 @@ const HomePage = () => {
             <motion.div
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => {
+              onClick={(e) => {
                 window.open("https://github.com/deekaynine");
               }}
             >
@@ -253,11 +253,14 @@ const HomePage = () => {
       </div>
       {/*PauseScreen*/}
       {paused ? (
-        <div class="bg-black w-full h-full absolute top-0 left-0 opacity-90 z-0 ">
+        <div
+          class="bg-black w-full h-full absolute top-0 left-0 opacity-90 z-0 "
+          onClick={handlePausePlaySwitch}
+        >
           <motion.div
             animate={{ opacity: [0, 1] }}
             transition={{ delay: 0.2 }}
-            class="absolute top-1/2 left-[57%] md:top-1/2 md:left-1/2 md:transform -translate-x-1/2 -translate-y-1/2 text-[#dfdbdb] font-semibold uppercase cursor-pointer items-center text-3xl tracking-[7px]   "
+            class="absolute top-1/2 left-[57%] md:top-1/2 md:left-1/2 md:transform -translate-x-1/2 -translate-y-1/2 text-[#dfdbdb] font-semibold uppercase cursor-pointer items-center text-3xl tracking-[7px]"
           >
             Music Paused
           </motion.div>
